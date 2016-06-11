@@ -13,8 +13,8 @@ class APIClient {
     
     static let sharedClient = APIClient()
     
+
     private let baseURL = "http://api.football-data.org/v1/soccerseasons/424/teams"
-    
     private init() {
         
     }
