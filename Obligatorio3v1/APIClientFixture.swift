@@ -13,14 +13,19 @@ class APIClientFixture {
     
     static let sharedClient = APIClientFixture()
     
-    private let baseURL = "http://api.football-data.org/v1/soccerseasons/424/fixtures"
+    private var baseURL = ""
     
     private init() {
         
     }
     
-    func FixtureOnCompletion(onCompletion: (fixture: [Fixture]?, error: NSError?) -> Void) {
-        
+    func fixtureOnCompletion(origin: String?, onCompletion: (fixture: [Fixture]?, error: NSError?) -> Void) {
+        if (origin == "global"){
+            baseURL = "http://api.football-data.org/v1/soccerseasons/424/fixtures"
+        }
+        else{
+            baseURL = origin!
+        }
         
         Alamofire.request(.GET, self.baseURL).validate().responseJSON { (response: Response<AnyObject, NSError>) -> Void in
             print(response)
@@ -42,3 +47,4 @@ class APIClientFixture {
     }
     
 }
+

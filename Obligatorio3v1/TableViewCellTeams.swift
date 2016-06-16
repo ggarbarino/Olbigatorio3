@@ -10,8 +10,9 @@ import Foundation
 
 class TableViewCellTeam: UITableViewCell{
     
-    @IBOutlet weak var teamFlag: UIWebView!
+    
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var flag: UIImageView!
     
     
     override func awakeFromNib() {

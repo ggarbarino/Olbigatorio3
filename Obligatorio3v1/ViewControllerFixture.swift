@@ -29,7 +29,7 @@ class ViewControllerFixture: UIViewController {
         super.viewWillAppear(animated)
         
         
-        APIClientFixture.sharedClient.FixtureOnCompletion { (fixture, error) -> Void in
+        APIClientFixture.sharedClient.fixtureOnCompletion("global") { (fixture, error) -> Void in
             
             if let fixture = fixture {
                 self.fixture = fixture
@@ -55,12 +55,9 @@ extension ViewControllerFixture: UITableViewDataSource {
         cell.homeTeam.text = fixture![indexPath.row].homeTeamName
         cell.awayTeam.text = fixture![indexPath.row].awayTeamName
         
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-ddTHH:mm:ss"
-        let day: NSDate = dateFormatter.dateFromString(fixture![indexPath.row].date!.stringByReplacingOccurrencesOfString("Z", withString: "", options: .LiteralSearch, range: nil))!
+       
         
-        
-        cell.dateMatch.text = day.description
+        cell.dateMatch.text = fixture![indexPath.row].date?.description
         
         if let goalsHomeTeam = fixture![indexPath.row].goalsHomeTeam, goalsAwayTeam = fixture![indexPath.row].goalsAwayTeam  {
             cell.homeGoals.text = goalsHomeTeam.description

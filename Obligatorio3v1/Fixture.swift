@@ -15,7 +15,7 @@ class Fixture: Mappable {
     var awayTeamName: String?
     var goalsHomeTeam: Int?
     var goalsAwayTeam: Int?
-    var date: String?
+    var date: NSDate?
     
     required init?(_ map: Map) {
         
@@ -26,6 +26,6 @@ class Fixture: Mappable {
         self.awayTeamName <- map ["awayTeamName"]
         self.goalsHomeTeam <- map ["result.goalsHomeTeam"]
         self.goalsAwayTeam <- map ["result.goalsAwayTeam"]
-        self.date <- map ["date"]
+        self.date <- (map["date"], ISO8601DateTransform())
     }
 }

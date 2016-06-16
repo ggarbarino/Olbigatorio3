@@ -22,6 +22,8 @@
 		95DD5C9E1D0A13F7004D8EB0 /* Obligatorio3v1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD5C9D1D0A13F7004D8EB0 /* Obligatorio3v1UITests.swift */; };
 		95DD5CAC1D0A145D004D8EB0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD5CAB1D0A145D004D8EB0 /* APIClient.swift */; };
 		95DD5CAE1D0A1AF6004D8EB0 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD5CAD1D0A1AF6004D8EB0 /* Team.swift */; };
+		95EFE10C1D12317F003B5A6C /* ViewControllerTeamFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFE10B1D12317F003B5A6C /* ViewControllerTeamFixture.swift */; };
+		95EFE10E1D12343A003B5A6C /* TableViewCellTeamFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFE10D1D12343A003B5A6C /* TableViewCellTeamFixture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		95DD5C9F1D0A13F7004D8EB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95DD5CAB1D0A145D004D8EB0 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = ../APIClient.swift; sourceTree = "<group>"; };
 		95DD5CAD1D0A1AF6004D8EB0 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		95EFE10B1D12317F003B5A6C /* ViewControllerTeamFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTeamFixture.swift; sourceTree = "<group>"; };
+		95EFE10D1D12343A003B5A6C /* TableViewCellTeamFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellTeamFixture.swift; sourceTree = "<group>"; };
 		B3A00B2946D3B94DCED4F272 /* Pods-Obligatorio3v1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Obligatorio3v1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Obligatorio3v1/Pods-Obligatorio3v1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,8 +137,10 @@
 				95DD5C7F1D0A13F6004D8EB0 /* ViewController.swift */,
 				95AB511D1D0B8C5A00A3CF0E /* Fixture.swift */,
 				95AB511F1D0B8C8200A3CF0E /* APIClientFixture.swift */,
+				95EFE10B1D12317F003B5A6C /* ViewControllerTeamFixture.swift */,
 				95AB51211D0B908000A3CF0E /* ViewControllerFixture.swift */,
 				95DD5C811D0A13F7004D8EB0 /* Main.storyboard */,
+				95EFE10D1D12343A003B5A6C /* TableViewCellTeamFixture.swift */,
 				95AB511B1D0B7CFC00A3CF0E /* TableViewCellTeams.swift */,
 				95AB51231D0B92FA00A3CF0E /* TableViewCellFixture.swift */,
 				95DD5C841D0A13F7004D8EB0 /* Assets.xcassets */,
@@ -358,7 +364,9 @@
 				95DD5C801D0A13F6004D8EB0 /* ViewController.swift in Sources */,
 				95DD5C7E1D0A13F6004D8EB0 /* AppDelegate.swift in Sources */,
 				95AB51221D0B908000A3CF0E /* ViewControllerFixture.swift in Sources */,
+				95EFE10E1D12343A003B5A6C /* TableViewCellTeamFixture.swift in Sources */,
 				95AB511C1D0B7CFC00A3CF0E /* TableViewCellTeams.swift in Sources */,
+				95EFE10C1D12317F003B5A6C /* ViewControllerTeamFixture.swift in Sources */,
 				95DD5CAC1D0A145D004D8EB0 /* APIClient.swift in Sources */,
 				95AB511E1D0B8C5A00A3CF0E /* Fixture.swift in Sources */,
 			);

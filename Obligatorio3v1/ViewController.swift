@@ -11,7 +11,7 @@ import AlamofireImage
 
 class ViewController: UIViewController {
     var team: [Team]?
-    
+    var teamFixtrue: String? = ""
     @IBOutlet weak var teamsTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +40,22 @@ class ViewController: UIViewController {
         
         }
     }
-    func obtainFlagHtml (URL : String) ->String{
-        return "<img height='50px' width='100px' src=\"\(URL)\" />"
-    }
 
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+       
+        self.performSegueWithIdentifier("goToTeamFixture", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier=="goToTeamFixture"){
+            let teamFixture = segue.destinationViewController as! ViewControllerTeamFixture
+            teamFixture.urlFixture = teamFixtrue
+        }
+        
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {
@@ -54,11 +66,8 @@ extension ViewController: UITableViewDataSource {
         let dequeued = tableView.dequeueReusableCellWithIdentifier("teamCell", forIndexPath: indexPath) as! TableViewCellTeam
         let cell = dequeued as TableViewCellTeam
         cell.name.text = team![indexPath.row].name
-        
-        let URL = NSURL(string: team![indexPath.row].URLflag!)
-        let requestObj = obtainFlagHtml((URL?.absoluteString)!)
-        
-        cell.teamFlag.loadHTMLString(requestObj, baseURL: nil)
+        cell.flag.image = UIImage(named: team![indexPath.row].name!)
+        teamFixtrue = team![indexPath.row].teamFixture
         return cell
     }
 }
