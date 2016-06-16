@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate {
     var team: [Team]?
     var teamFixtrue: String? = ""
     @IBOutlet weak var teamsTable: UITableView!
@@ -32,6 +32,7 @@ class ViewController: UIViewController {
             if let team = team {
                 self.team = team
                 self.teamsTable.dataSource = self
+                self.teamsTable.delegate = self
                 self.teamsTable.reloadData()
             }
         
