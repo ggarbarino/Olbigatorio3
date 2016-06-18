@@ -20,6 +20,6 @@ class Team: Mappable {
     func mapping (map: Map){
         self.name <- map ["name"]
         self.URLflag <- map ["crestUrl"]
-        self.teamFixture <- map ["fixtures.href"]
+        self.teamFixture <- map ["_links.fixtures.href"]
     }
 }
