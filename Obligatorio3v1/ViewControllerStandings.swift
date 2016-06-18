@@ -16,7 +16,10 @@ class ViewControllerStandings: UIViewController, UITableViewDelegate {
    
     @IBOutlet weak var tableGroup: UITableView!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -75,14 +78,35 @@ extension ViewControllerStandings: UITableViewDataSource {
         return 6
     
     }
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
+        
+        switch(section)
+        {
+        case 2:return "Title 2"
+         
+        default :return "3408743"
+            
+        }
+        
+    }
+    /*func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var view = UIView()
+        view.backgroundColor = UIColor(red: 200, green: 200, blue: 150, alpha: 0.9)
+        return view
     
+    }*/
+    
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let dequeued = tableView.dequeueReusableCellWithIdentifier("groupCell", forIndexPath: indexPath) as! TableViewCellStandings
         let cell = dequeued as TableViewCellStandings
-        
-        actualGroup = groupForSection (indexPath.section)
+                actualGroup = groupForSection (indexPath.section)
         cell.points.text = actualGroup![indexPath.row].points?.description
+    
         /*cell.points.text = standings?.grupA[0].![indexPath.row].points?.description
         cell.played.text = standings![indexPath.row].playedGames?.description
         cell.rank.text = standings![indexPath.row].playedGames?.description
