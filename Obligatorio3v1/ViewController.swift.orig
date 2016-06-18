@@ -74,7 +74,11 @@ extension ViewController: UITableViewDataSource {
         let cell = dequeued as TableViewCellTeam
         cell.name.text = team![indexPath.row].name
         cell.flag.image = UIImage(named: team![indexPath.row].name!)
-
+<<<<<<< HEAD
+        
+=======
+       
+>>>>>>> origin/master
         return cell
     }
 }

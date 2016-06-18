@@ -76,6 +76,7 @@ extension ViewControllerStandings: UITableViewDataSource {
     
     }
     
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let dequeued = tableView.dequeueReusableCellWithIdentifier("groupCell", forIndexPath: indexPath) as! TableViewCellStandings
         let cell = dequeued as TableViewCellStandings
