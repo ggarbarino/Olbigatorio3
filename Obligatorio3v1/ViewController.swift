@@ -8,14 +8,19 @@
 
 import UIKit
 import AlamofireImage
+import GoogleMobileAds
 
 class ViewController: UIViewController, UITableViewDelegate {
+    @IBOutlet weak var bannerView: GADBannerView!
     var team: [Team]?
     var teamFixtrue: String? = ""
     @IBOutlet weak var teamsTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +74,11 @@ extension ViewController: UITableViewDataSource {
         let cell = dequeued as TableViewCellTeam
         cell.name.text = team![indexPath.row].name
         cell.flag.image = UIImage(named: team![indexPath.row].name!)
+<<<<<<< HEAD
         
+=======
+       
+>>>>>>> origin/master
         return cell
     }
 }

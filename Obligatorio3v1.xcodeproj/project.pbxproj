@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62620B2A1D14C313004938BC /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62620B291D14C313004938BC /* GoogleMobileAds.framework */; };
+		6272D80E1D135FEE0033091E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6272D80D1D135FEE0033091E /* GoogleService-Info.plist */; };
 		7BA18BF75986B7A6B5556A05 /* Pods_Obligatorio3v1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFD826FCB92C21B5FC49EAB /* Pods_Obligatorio3v1.framework */; };
 		952F05A31D135D81001F7EF8 /* APIClientPositions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952F05A21D135D81001F7EF8 /* APIClientPositions.swift */; };
 		952F05A51D135E98001F7EF8 /* Standings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952F05A41D135E98001F7EF8 /* Standings.swift */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		580250C2B53D6B2D436D7C43 /* Pods-Obligatorio3v1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Obligatorio3v1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Obligatorio3v1/Pods-Obligatorio3v1.release.xcconfig"; sourceTree = "<group>"; };
+		62620B291D14C313004938BC /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		6272D80D1D135FEE0033091E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6DFD826FCB92C21B5FC49EAB /* Pods_Obligatorio3v1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Obligatorio3v1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		952F05A21D135D81001F7EF8 /* APIClientPositions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientPositions.swift; sourceTree = "<group>"; };
 		952F05A41D135E98001F7EF8 /* Standings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Standings.swift; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62620B2A1D14C313004938BC /* GoogleMobileAds.framework in Frameworks */,
 				7BA18BF75986B7A6B5556A05 /* Pods_Obligatorio3v1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +124,7 @@
 		95DD5C711D0A13F6004D8EB0 = {
 			isa = PBXGroup;
 			children = (
+				62620B291D14C313004938BC /* GoogleMobileAds.framework */,
 				95DD5C7C1D0A13F6004D8EB0 /* Obligatorio3v1 */,
 				95DD5C911D0A13F7004D8EB0 /* Obligatorio3v1Tests */,
 				95DD5C9C1D0A13F7004D8EB0 /* Obligatorio3v1UITests */,
@@ -141,7 +147,7 @@
 		95DD5C7C1D0A13F6004D8EB0 /* Obligatorio3v1 */ = {
 			isa = PBXGroup;
 			children = (
-				95822EEF1D14C957004EC95E /* GoogleService-Info.plist */,
+				6272D80D1D135FEE0033091E /* GoogleService-Info.plist */,
 				95DD5CAB1D0A145D004D8EB0 /* APIClient.swift */,
 				95AB511F1D0B8C8200A3CF0E /* APIClientFixture.swift */,
 				952F05A21D135D81001F7EF8 /* APIClientPositions.swift */,
@@ -299,7 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95DD5C881D0A13F7004D8EB0 /* LaunchScreen.storyboard in Resources */,
-				95822EF01D14C957004EC95E /* GoogleService-Info.plist in Resources */,
+				6272D80E1D135FEE0033091E /* GoogleService-Info.plist in Resources */,
 				95DD5C851D0A13F7004D8EB0 /* Assets.xcassets in Resources */,
 				95DD5C831D0A13F7004D8EB0 /* Main.storyboard in Resources */,
 			);
@@ -529,6 +535,10 @@
 			baseConfigurationReference = B3A00B2946D3B94DCED4F272 /* Pods-Obligatorio3v1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Obligatorio3v1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = German.Obligatorio3v1;
@@ -541,6 +551,10 @@
 			baseConfigurationReference = 580250C2B53D6B2D436D7C43 /* Pods-Obligatorio3v1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Obligatorio3v1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = German.Obligatorio3v1;
