@@ -45,11 +45,12 @@ class ViewController: UIViewController, UITableViewDelegate {
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-       
+        teamFixtrue = team![indexPath.row].teamFixture
         self.performSegueWithIdentifier("goToTeamFixture", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if (segue.identifier=="goToTeamFixture"){
             let teamFixture = segue.destinationViewController as! ViewControllerTeamFixture
             teamFixture.urlFixture = teamFixtrue
@@ -68,7 +69,7 @@ extension ViewController: UITableViewDataSource {
         let cell = dequeued as TableViewCellTeam
         cell.name.text = team![indexPath.row].name
         cell.flag.image = UIImage(named: team![indexPath.row].name!)
-        teamFixtrue = team![indexPath.row].teamFixture
+        
         return cell
     }
 }

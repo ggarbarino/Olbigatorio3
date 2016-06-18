@@ -1,22 +1,21 @@
 //
-//  TableViewCellFixture.swift
+//  TableViewCellStandings.swift
 //  Obligatorio3v1
 //
-//  Created by SP07 on 10/6/16.
+//  Created by SP07 on 17/6/16.
 //  Copyright © 2016 SP07. All rights reserved.
 //
 import UIKit
 import Foundation
 
-class TableViewCellFixture: UITableViewCell{
+class TableViewCellStandings: UITableViewCell{
     
-    @IBOutlet weak var homeTeam: UILabel!
-    @IBOutlet weak var homeGoals: UILabel!
-    @IBOutlet weak var awayTeam: UILabel!
-    @IBOutlet weak var awayGoals: UILabel!
-    @IBOutlet weak var dateMatch: UILabel!
-    @IBOutlet weak var homeFlag: UIImageView!
-    @IBOutlet weak var awayFlag: UIImageView!
+
+    @IBOutlet weak var rank: UILabel!
+    @IBOutlet weak var flag: UIImageView!
+    @IBOutlet weak var played: UILabel!
+    @IBOutlet weak var points: UILabel!
+    @IBOutlet weak var goalDiff: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

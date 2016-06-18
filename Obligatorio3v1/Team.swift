@@ -11,15 +11,27 @@ import ObjectMapper
 
 class Team: Mappable {
     var name: String?
-    var URLflag: String?
     var teamFixture: String?
+    var points: Int?
+    var goalsDifference: Int?
+    var rank: Int?
+    var team: String?
+    var playedGames: Int?
+    
     required init?(_ map: Map) {
     
     }
 
     func mapping (map: Map){
         self.name <- map ["name"]
-        self.URLflag <- map ["crestUrl"]
-        self.teamFixture <- map ["fixtures.href"]
+        self.teamFixture <- map ["_links.fixtures.href"]
+
+        self.points <- map ["points"]
+        self.goalsDifference <- map ["goalDifference"]
+        self.rank <- map ["rank"]
+        self.team <- map ["team"]
+        self.playedGames <- map ["playedGames"]
+        
+     
     }
 }

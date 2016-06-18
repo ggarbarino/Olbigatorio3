@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7BA18BF75986B7A6B5556A05 /* Pods_Obligatorio3v1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFD826FCB92C21B5FC49EAB /* Pods_Obligatorio3v1.framework */; };
+		952F05A31D135D81001F7EF8 /* APIClientPositions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952F05A21D135D81001F7EF8 /* APIClientPositions.swift */; };
+		952F05A51D135E98001F7EF8 /* Standings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952F05A41D135E98001F7EF8 /* Standings.swift */; };
+		95822EEC1D14B99E004EC95E /* ViewControllerStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95822EEB1D14B99E004EC95E /* ViewControllerStandings.swift */; };
+		95822EEE1D14B9D0004EC95E /* TableViewCellStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95822EED1D14B9D0004EC95E /* TableViewCellStandings.swift */; };
+		95822EF01D14C957004EC95E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95822EEF1D14C957004EC95E /* GoogleService-Info.plist */; };
 		95AB511C1D0B7CFC00A3CF0E /* TableViewCellTeams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB511B1D0B7CFC00A3CF0E /* TableViewCellTeams.swift */; };
 		95AB511E1D0B8C5A00A3CF0E /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB511D1D0B8C5A00A3CF0E /* Fixture.swift */; };
 		95AB51201D0B8C8200A3CF0E /* APIClientFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB511F1D0B8C8200A3CF0E /* APIClientFixture.swift */; };
@@ -46,6 +51,11 @@
 /* Begin PBXFileReference section */
 		580250C2B53D6B2D436D7C43 /* Pods-Obligatorio3v1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Obligatorio3v1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Obligatorio3v1/Pods-Obligatorio3v1.release.xcconfig"; sourceTree = "<group>"; };
 		6DFD826FCB92C21B5FC49EAB /* Pods_Obligatorio3v1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Obligatorio3v1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		952F05A21D135D81001F7EF8 /* APIClientPositions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientPositions.swift; sourceTree = "<group>"; };
+		952F05A41D135E98001F7EF8 /* Standings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Standings.swift; sourceTree = "<group>"; };
+		95822EEB1D14B99E004EC95E /* ViewControllerStandings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerStandings.swift; sourceTree = "<group>"; };
+		95822EED1D14B9D0004EC95E /* TableViewCellStandings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellStandings.swift; sourceTree = "<group>"; };
+		95822EEF1D14C957004EC95E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Users/SP07/Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		95AB511B1D0B7CFC00A3CF0E /* TableViewCellTeams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellTeams.swift; sourceTree = "<group>"; };
 		95AB511D1D0B8C5A00A3CF0E /* Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
 		95AB511F1D0B8C8200A3CF0E /* APIClientFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientFixture.swift; sourceTree = "<group>"; };
@@ -131,21 +141,26 @@
 		95DD5C7C1D0A13F6004D8EB0 /* Obligatorio3v1 */ = {
 			isa = PBXGroup;
 			children = (
+				95822EEF1D14C957004EC95E /* GoogleService-Info.plist */,
 				95DD5CAB1D0A145D004D8EB0 /* APIClient.swift */,
-				95DD5CAD1D0A1AF6004D8EB0 /* Team.swift */,
-				95DD5C7D1D0A13F6004D8EB0 /* AppDelegate.swift */,
-				95DD5C7F1D0A13F6004D8EB0 /* ViewController.swift */,
-				95AB511D1D0B8C5A00A3CF0E /* Fixture.swift */,
 				95AB511F1D0B8C8200A3CF0E /* APIClientFixture.swift */,
-				95EFE10B1D12317F003B5A6C /* ViewControllerTeamFixture.swift */,
-				95AB51211D0B908000A3CF0E /* ViewControllerFixture.swift */,
+				952F05A21D135D81001F7EF8 /* APIClientPositions.swift */,
+				95DD5C7D1D0A13F6004D8EB0 /* AppDelegate.swift */,
+				95DD5C841D0A13F7004D8EB0 /* Assets.xcassets */,
+				95AB511D1D0B8C5A00A3CF0E /* Fixture.swift */,
+				95DD5C891D0A13F7004D8EB0 /* Info.plist */,
+				95DD5C861D0A13F7004D8EB0 /* LaunchScreen.storyboard */,
 				95DD5C811D0A13F7004D8EB0 /* Main.storyboard */,
+				952F05A41D135E98001F7EF8 /* Standings.swift */,
+				95AB51231D0B92FA00A3CF0E /* TableViewCellFixture.swift */,
+				95822EED1D14B9D0004EC95E /* TableViewCellStandings.swift */,
 				95EFE10D1D12343A003B5A6C /* TableViewCellTeamFixture.swift */,
 				95AB511B1D0B7CFC00A3CF0E /* TableViewCellTeams.swift */,
-				95AB51231D0B92FA00A3CF0E /* TableViewCellFixture.swift */,
-				95DD5C841D0A13F7004D8EB0 /* Assets.xcassets */,
-				95DD5C861D0A13F7004D8EB0 /* LaunchScreen.storyboard */,
-				95DD5C891D0A13F7004D8EB0 /* Info.plist */,
+				95DD5CAD1D0A1AF6004D8EB0 /* Team.swift */,
+				95DD5C7F1D0A13F6004D8EB0 /* ViewController.swift */,
+				95AB51211D0B908000A3CF0E /* ViewControllerFixture.swift */,
+				95822EEB1D14B99E004EC95E /* ViewControllerStandings.swift */,
+				95EFE10B1D12317F003B5A6C /* ViewControllerTeamFixture.swift */,
 			);
 			path = Obligatorio3v1;
 			sourceTree = "<group>";
@@ -284,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95DD5C881D0A13F7004D8EB0 /* LaunchScreen.storyboard in Resources */,
+				95822EF01D14C957004EC95E /* GoogleService-Info.plist in Resources */,
 				95DD5C851D0A13F7004D8EB0 /* Assets.xcassets in Resources */,
 				95DD5C831D0A13F7004D8EB0 /* Main.storyboard in Resources */,
 			);
@@ -359,14 +375,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				95AB51241D0B92FA00A3CF0E /* TableViewCellFixture.swift in Sources */,
+				95822EEC1D14B99E004EC95E /* ViewControllerStandings.swift in Sources */,
 				95AB51201D0B8C8200A3CF0E /* APIClientFixture.swift in Sources */,
 				95DD5CAE1D0A1AF6004D8EB0 /* Team.swift in Sources */,
 				95DD5C801D0A13F6004D8EB0 /* ViewController.swift in Sources */,
+				95822EEE1D14B9D0004EC95E /* TableViewCellStandings.swift in Sources */,
+				952F05A31D135D81001F7EF8 /* APIClientPositions.swift in Sources */,
 				95DD5C7E1D0A13F6004D8EB0 /* AppDelegate.swift in Sources */,
 				95AB51221D0B908000A3CF0E /* ViewControllerFixture.swift in Sources */,
 				95EFE10E1D12343A003B5A6C /* TableViewCellTeamFixture.swift in Sources */,
 				95AB511C1D0B7CFC00A3CF0E /* TableViewCellTeams.swift in Sources */,
 				95EFE10C1D12317F003B5A6C /* ViewControllerTeamFixture.swift in Sources */,
+				952F05A51D135E98001F7EF8 /* Standings.swift in Sources */,
 				95DD5CAC1D0A145D004D8EB0 /* APIClient.swift in Sources */,
 				95AB511E1D0B8C5A00A3CF0E /* Fixture.swift in Sources */,
 			);
