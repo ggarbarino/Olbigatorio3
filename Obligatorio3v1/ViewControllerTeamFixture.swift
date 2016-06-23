@@ -60,7 +60,8 @@ extension ViewControllerTeamFixture: UITableViewDataSource {
             cell.homeGoals.text = "-"
             cell.awayGoals.text = "-"
         }
-        
+        cell.homeFlag.image = UIImage(named: fixture![indexPath.row].homeTeamName!)
+        cell.awayFlag.image = UIImage(named: fixture![indexPath.row].awayTeamName!)
         
         
         
