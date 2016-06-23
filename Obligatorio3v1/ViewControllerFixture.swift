@@ -12,7 +12,7 @@ import DateTools
 
 class ViewControllerFixture: UIViewController {
     var fixture: [Fixture]?
-    
+    var matchDay: String = ""
     @IBOutlet weak var tableViewFixture: UITableView!
 
     override func viewDidLoad() {
@@ -54,10 +54,14 @@ extension ViewControllerFixture: UITableViewDataSource {
         let cell = dequeued as TableViewCellFixture
         cell.homeTeam.text = fixture![indexPath.row].homeTeamName
         cell.awayTeam.text = fixture![indexPath.row].awayTeamName
-        
-       
-        
-        cell.dateMatch.text = fixture![indexPath.row].date?.description
+        let matchStatus: String = fixture![indexPath.row].status!
+        if matchStatus == "TIMED"{
+           self.matchDay = (fixture![indexPath.row].date?.formattedDateWithFormat("EEE dd MMMM hh:mm a"))!
+        }
+        else{
+            self.matchDay = (fixture![indexPath.row].date?.formattedDateWithFormat("EEE dd MMMM"))!
+        }
+        cell.dateMatch.text = matchDay// + " of " + (fixture![indexPath.row].date?.formattedDateWithFormat("MMMM"))!
         
         if let goalsHomeTeam = fixture![indexPath.row].goalsHomeTeam, goalsAwayTeam = fixture![indexPath.row].goalsAwayTeam  {
             cell.homeGoals.text = goalsHomeTeam.description
