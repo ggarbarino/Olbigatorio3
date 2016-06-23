@@ -22,7 +22,7 @@ class APIClient {
     func footballOnCompletion(onCompletion: (team: [Team]?, error: NSError?) -> Void) {
         
         
-        Alamofire.request(.GET, self.baseURL).validate().responseJSON { (response: Response<AnyObject, NSError>) -> Void in
+        Alamofire.request(.GET, self.baseURL, headers:["X-Auth-Token":"d2c9b223d3054fcb89fd740bc93a88d0"]).validate().responseJSON { (response: Response<AnyObject, NSError>) -> Void in
             print(response)
             switch response.result {
                 

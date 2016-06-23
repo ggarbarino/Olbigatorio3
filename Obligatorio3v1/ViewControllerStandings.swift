@@ -19,7 +19,7 @@ class ViewControllerStandings: UIViewController, UITableViewDelegate {
         
         super.viewDidLoad()
         
-
+        self.tableGroup.registerNib(UINib(nibName: "HeaderStandings", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderStandings")
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -78,23 +78,29 @@ extension ViewControllerStandings: UITableViewDataSource {
         return 6
     
     }
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
+  
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = tableView.dequeueReusableHeaderFooterViewWithIdentifier("HeaderStandings") as! HeaderStandings
         
+     
         switch(section)
         {
-        case 2:return "Title 2"
-         
-        default :return "3408743"
-            
+        case 0:
+            view.groupName.text = "Group A"
+        case 1:
+            view.groupName.text = "Group B"
+        case 2:
+            view.groupName.text = "Group C"
+        case 3:
+            view.groupName.text = "Group D"
+        case 4:
+            view.groupName.text = "Group E"
+        default:
+            view.groupName.text = "Group F"
         }
-        
-    }
-    /*func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        var view = UIView()
-        view.backgroundColor = UIColor(red: 200, green: 200, blue: 150, alpha: 0.9)
         return view
     
-    }*/
+    }
     
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -104,15 +110,14 @@ extension ViewControllerStandings: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let dequeued = tableView.dequeueReusableCellWithIdentifier("groupCell", forIndexPath: indexPath) as! TableViewCellStandings
         let cell = dequeued as TableViewCellStandings
-                actualGroup = groupForSection (indexPath.section)
+        actualGroup = groupForSection (indexPath.section)
         cell.points.text = actualGroup![indexPath.row].points?.description
-    
-        /*cell.points.text = standings?.grupA[0].![indexPath.row].points?.description
-        cell.played.text = standings![indexPath.row].playedGames?.description
-        cell.rank.text = standings![indexPath.row].playedGames?.description
-        cell.goalDiff.text = standings![indexPath.row].goalsDifference?.description
-        cell.flag.image = UIImage(named: standings![indexPath.row].team!)
-        */
+        cell.rank.text = actualGroup![indexPath.row].rank?.description
+        cell.played.text = actualGroup![indexPath.row].playedGames?.description
+        cell.goalDiff.text = actualGroup![indexPath.row].goalsDifference?.description
+        cell.flag.image = UIImage(named: actualGroup![indexPath.row].team!)
         return cell
     }
 }
+
+
