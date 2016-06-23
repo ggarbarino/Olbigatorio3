@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5RP-dv-6K4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5RP-dv-6K4">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Teams-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Obligatorio3v1" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rMt-rK-aDD" id="ycS-78-j6M">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgM-C8-DDI">
@@ -76,7 +76,7 @@
                             <constraint firstItem="LMq-1U-KTu" firstAttribute="top" secondItem="dkW-Qq-h9l" secondAttribute="bottom" id="rWz-gI-zdp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="rCv-jR-GZF"/>
+                    <tabBarItem key="tabBarItem" title="Teams" image="flag-25" id="rCv-jR-GZF"/>
                     <navigationItem key="navigationItem" id="rAJ-J7-2V6"/>
                     <connections>
                         <outlet property="bannerView" destination="LMq-1U-KTu" id="tDy-nW-tzf"/>
@@ -108,7 +108,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aNY-N1-wua" id="5Wr-gT-h8d">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Home Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfP-ak-hDY">
@@ -237,7 +237,7 @@
             </objects>
             <point key="canvasLocation" x="270" y="-937"/>
         </scene>
-        <!--Item-->
+        <!--Standings-->
         <scene sceneID="0rv-mY-Sru">
             <objects>
                 <viewController id="dKN-cm-m6X" customClass="ViewControllerStandings" customModule="Obligatorio3v1" customModuleProvider="target" sceneMemberID="viewController">
@@ -249,15 +249,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aew-kf-Q8A">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aew-kf-Q8A">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" rowHeight="101" id="Esx-nf-UbH" customClass="TableViewCellStandings" customModule="Obligatorio3v1" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="101"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" rowHeight="60" id="Esx-nf-UbH" customClass="TableViewCellStandings" customModule="Obligatorio3v1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Esx-nf-UbH" id="A6o-6h-qDM">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLU-6G-1mL">
@@ -287,22 +287,22 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vk1-E7-boc">
                                                     <rect key="frame" x="78" y="8" width="75" height="70"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="75" id="AT1-P7-wdJ"/>
-                                                        <constraint firstAttribute="height" constant="75" id="JFx-iM-KeT"/>
+                                                        <constraint firstAttribute="width" constant="50" id="AT1-P7-wdJ"/>
+                                                        <constraint firstAttribute="height" constant="40" id="JFx-iM-KeT"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ajb-fO-Uqy" firstAttribute="top" secondItem="A6o-6h-qDM" secondAttribute="topMargin" constant="31" id="3Yd-B6-6xZ"/>
-                                                <constraint firstItem="uOc-22-bB8" firstAttribute="leading" secondItem="36y-VQ-Anc" secondAttribute="trailing" constant="15" id="8Zo-jQ-QSP"/>
-                                                <constraint firstItem="gLU-6G-1mL" firstAttribute="top" secondItem="A6o-6h-qDM" secondAttribute="topMargin" constant="31" id="D7u-70-g0c"/>
-                                                <constraint firstItem="Vk1-E7-boc" firstAttribute="top" secondItem="A6o-6h-qDM" secondAttribute="topMargin" constant="-8" id="IgX-Hr-cI3"/>
-                                                <constraint firstItem="36y-VQ-Anc" firstAttribute="leading" secondItem="ajb-fO-Uqy" secondAttribute="trailing" constant="15" id="Kew-CA-Ply"/>
+                                                <constraint firstItem="ajb-fO-Uqy" firstAttribute="top" secondItem="A6o-6h-qDM" secondAttribute="topMargin" constant="20" id="3Yd-B6-6xZ"/>
+                                                <constraint firstItem="uOc-22-bB8" firstAttribute="leading" secondItem="36y-VQ-Anc" secondAttribute="trailing" constant="35" id="8Zo-jQ-QSP"/>
+                                                <constraint firstItem="gLU-6G-1mL" firstAttribute="top" secondItem="A6o-6h-qDM" secondAttribute="topMargin" constant="20" id="D7u-70-g0c"/>
+                                                <constraint firstItem="Vk1-E7-boc" firstAttribute="top" secondItem="A6o-6h-qDM" secondAttribute="topMargin" constant="12" id="IgX-Hr-cI3"/>
+                                                <constraint firstItem="36y-VQ-Anc" firstAttribute="leading" secondItem="ajb-fO-Uqy" secondAttribute="trailing" constant="35" id="Kew-CA-Ply"/>
                                                 <constraint firstItem="gLU-6G-1mL" firstAttribute="leading" secondItem="A6o-6h-qDM" secondAttribute="leadingMargin" constant="15" id="YNF-yG-fZ1"/>
-                                                <constraint firstItem="ajb-fO-Uqy" firstAttribute="leading" secondItem="Vk1-E7-boc" secondAttribute="trailing" constant="37" id="fln-u5-MAG"/>
+                                                <constraint firstItem="ajb-fO-Uqy" firstAttribute="leading" secondItem="Vk1-E7-boc" secondAttribute="trailing" constant="50" id="fln-u5-MAG"/>
                                                 <constraint firstItem="Vk1-E7-boc" firstAttribute="leading" secondItem="gLU-6G-1mL" secondAttribute="trailing" constant="15" id="gT4-RZ-bve"/>
-                                                <constraint firstItem="uOc-22-bB8" firstAttribute="top" secondItem="A6o-6h-qDM" secondAttribute="topMargin" constant="31" id="gcg-c6-h7w"/>
-                                                <constraint firstItem="36y-VQ-Anc" firstAttribute="top" secondItem="A6o-6h-qDM" secondAttribute="topMargin" constant="31" id="ib2-I9-eBB"/>
+                                                <constraint firstItem="uOc-22-bB8" firstAttribute="top" secondItem="A6o-6h-qDM" secondAttribute="topMargin" constant="20" id="gcg-c6-h7w"/>
+                                                <constraint firstItem="36y-VQ-Anc" firstAttribute="top" secondItem="A6o-6h-qDM" secondAttribute="topMargin" constant="20" id="ib2-I9-eBB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -336,7 +336,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ZWi-lz-ZdS"/>
+                    <tabBarItem key="tabBarItem" title="Standings" image="olympic_medal-25" id="ZWi-lz-ZdS"/>
                     <connections>
                         <outlet property="tableGroup" destination="aew-kf-Q8A" id="7ZC-Up-uqX"/>
                     </connections>
@@ -365,7 +365,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C1Z-JE-Jvs" id="msP-9G-Ach">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="129.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Home Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lr-Pd-8iF">
@@ -467,7 +467,7 @@
                             <constraint firstItem="vjZ-wK-Gxc" firstAttribute="top" secondItem="gqX-Eg-2g4" secondAttribute="bottom" id="fes-gI-dT1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fixture" id="dWu-u5-MOP"/>
+                    <tabBarItem key="tabBarItem" title="Fixture" image="football2_filled-25" selectedImage="football2_filled-25" id="dWu-u5-MOP"/>
                     <connections>
                         <outlet property="tableViewFixture" destination="gqX-Eg-2g4" id="ORg-W0-SQY"/>
                     </connections>
@@ -477,4 +477,9 @@
             <point key="canvasLocation" x="2115" y="-861"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="flag-25" width="25" height="25"/>
+        <image name="football2_filled-25" width="25" height="25"/>
+        <image name="olympic_medal-25" width="25" height="25"/>
+    </resources>
 </document>
