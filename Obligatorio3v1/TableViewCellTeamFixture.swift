@@ -13,8 +13,10 @@ class TableViewCellTeamFixture: UITableViewCell{
     
   
     
+    @IBOutlet weak var homeFlag: UIImageView!
     @IBOutlet weak var homeTeam: UILabel!
     @IBOutlet weak var homeGoals: UILabel!
+    @IBOutlet weak var awayFlag: UIImageView!
     @IBOutlet weak var awayTeam: UILabel!
     @IBOutlet weak var awayGoals: UILabel!
     

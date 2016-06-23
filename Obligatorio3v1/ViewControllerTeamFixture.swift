@@ -37,15 +37,10 @@ class ViewControllerTeamFixture: UIViewController {
                 self.tableViewTeamFixture.dataSource = self
                 self.tableViewTeamFixture.reloadData()
             }
-            
-            
-            
-            
         }
     }
-    
-    
 }
+
 extension ViewControllerTeamFixture: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (fixture?.count)!
@@ -65,7 +60,8 @@ extension ViewControllerTeamFixture: UITableViewDataSource {
             cell.homeGoals.text = "-"
             cell.awayGoals.text = "-"
         }
-        
+        cell.homeFlag.image = UIImage(named: fixture![indexPath.row].homeTeamName!)
+        cell.awayFlag.image = UIImage(named: fixture![indexPath.row].awayTeamName!)
         
         
         
