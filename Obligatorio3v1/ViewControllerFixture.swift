@@ -27,8 +27,6 @@ class ViewControllerFixture: UIViewController {
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
-        
-        
         APIClientFixture.sharedClient.fixtureOnCompletion("global") { (fixture, error) -> Void in
             
             if let fixture = fixture {
@@ -36,15 +34,10 @@ class ViewControllerFixture: UIViewController {
                 self.tableViewFixture.dataSource = self
                 self.tableViewFixture.reloadData()
             }
-            
-            
-            
-            
         }
     }
- 
-    
 }
+
 extension ViewControllerFixture: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (fixture?.count)!
@@ -54,9 +47,6 @@ extension ViewControllerFixture: UITableViewDataSource {
         let cell = dequeued as TableViewCellFixture
         cell.homeTeam.text = fixture![indexPath.row].homeTeamName
         cell.awayTeam.text = fixture![indexPath.row].awayTeamName
-        
-       
-        
         cell.dateMatch.text = fixture![indexPath.row].date?.description
         
         if let goalsHomeTeam = fixture![indexPath.row].goalsHomeTeam, goalsAwayTeam = fixture![indexPath.row].goalsAwayTeam  {
@@ -68,9 +58,6 @@ extension ViewControllerFixture: UITableViewDataSource {
         }
         cell.homeFlag.image = UIImage(named: fixture![indexPath.row].homeTeamName!)
         cell.awayFlag.image = UIImage(named: fixture![indexPath.row].awayTeamName!)
-        
-        
-        
         
         return cell
     }

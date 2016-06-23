@@ -27,10 +27,9 @@ class ViewController: UIViewController, UITableViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     override func viewWillAppear(animated: Bool) {
-        
         super.viewWillAppear(animated)
-        
         
         APIClient.sharedClient.footballOnCompletion { (team, error) -> Void in
             
@@ -40,16 +39,10 @@ class ViewController: UIViewController, UITableViewDelegate {
                 self.teamsTable.delegate = self
                 self.teamsTable.reloadData()
             }
-        
-        
-        
-        
         }
     }
 
-
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
         teamFixtrue = team![indexPath.row].teamFixture
         self.performSegueWithIdentifier("goToTeamFixture", sender: nil)
     }
@@ -60,9 +53,7 @@ class ViewController: UIViewController, UITableViewDelegate {
             let teamFixture = segue.destinationViewController as! ViewControllerTeamFixture
             teamFixture.urlFixture = teamFixtrue
         }
-        
     }
-    
 }
 
 extension ViewController: UITableViewDataSource {

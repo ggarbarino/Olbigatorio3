@@ -111,41 +111,69 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Home Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfP-ak-hDY">
-                                                    <rect key="frame" x="47" y="53" width="111" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Home Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfP-ak-hDY">
+                                                    <rect key="frame" x="157" y="58" width="111" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Away Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5O-Ls-gN6">
-                                                    <rect key="frame" x="357" y="24" width="87" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Home Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeQ-Sm-Dk1">
+                                                    <rect key="frame" x="157" y="24" width="111" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Away Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rn7-t9-t0r">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Away Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rn7-t9-t0r">
                                                     <rect key="frame" x="357" y="59" width="88" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Home Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeQ-Sm-Dk1">
-                                                    <rect key="frame" x="47" y="24" width="111" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f3d-T0-TsV">
+                                                    <rect key="frame" x="32" y="19" width="81" height="61"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kxC-ID-oio">
+                                                    <rect key="frame" x="475" y="19" width="81" height="61"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Away Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5O-Ls-gN6">
+                                                    <rect key="frame" x="357" y="24" width="87" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="o5O-Ls-gN6" firstAttribute="top" secondItem="5Wr-gT-h8d" secondAttribute="topMargin" constant="10" id="0Q0-GL-ccT"/>
+                                                <constraint firstItem="qfP-ak-hDY" firstAttribute="top" secondItem="QeQ-Sm-Dk1" secondAttribute="bottom" constant="10" id="3IC-Er-ndv"/>
                                                 <constraint firstItem="o5O-Ls-gN6" firstAttribute="top" secondItem="5Wr-gT-h8d" secondAttribute="topMargin" constant="16" id="3Z7-q6-deq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kxC-ID-oio" secondAttribute="trailing" constant="40" id="5vS-2t-A5g"/>
                                                 <constraint firstItem="rn7-t9-t0r" firstAttribute="leading" secondItem="qfP-ak-hDY" secondAttribute="trailing" constant="150" id="CAZ-WS-lnK"/>
-                                                <constraint firstItem="o5O-Ls-gN6" firstAttribute="leading" secondItem="QeQ-Sm-Dk1" secondAttribute="trailing" constant="150" id="I3P-DG-pdN"/>
-                                                <constraint firstItem="QeQ-Sm-Dk1" firstAttribute="leading" secondItem="5Wr-gT-h8d" secondAttribute="leadingMargin" constant="20" id="Qfn-rH-0w3"/>
+                                                <constraint firstItem="kxC-ID-oio" firstAttribute="leading" secondItem="rn7-t9-t0r" secondAttribute="trailing" constant="10" id="EIR-A5-xeR"/>
+                                                <constraint firstItem="f3d-T0-TsV" firstAttribute="top" secondItem="5Wr-gT-h8d" secondAttribute="topMargin" constant="10" id="SVg-oE-PDC"/>
+                                                <constraint firstItem="QeQ-Sm-Dk1" firstAttribute="top" secondItem="5Wr-gT-h8d" secondAttribute="topMargin" constant="10" id="UIY-3T-hsg"/>
                                                 <constraint firstItem="qfP-ak-hDY" firstAttribute="top" secondItem="QeQ-Sm-Dk1" secondAttribute="bottom" constant="15" id="Vvw-0H-aYx"/>
+                                                <constraint firstItem="kxC-ID-oio" firstAttribute="leading" secondItem="o5O-Ls-gN6" secondAttribute="trailing" constant="10" id="WO7-O7-FcJ"/>
+                                                <constraint firstItem="f3d-T0-TsV" firstAttribute="leading" secondItem="5Wr-gT-h8d" secondAttribute="leadingMargin" constant="40" id="Xwy-ef-PKC"/>
+                                                <constraint firstItem="rn7-t9-t0r" firstAttribute="top" secondItem="o5O-Ls-gN6" secondAttribute="bottom" constant="10" id="dJ4-qg-sBO"/>
                                                 <constraint firstItem="QeQ-Sm-Dk1" firstAttribute="top" secondItem="5Wr-gT-h8d" secondAttribute="topMargin" constant="16" id="gOL-tP-UsH"/>
+                                                <constraint firstItem="kxC-ID-oio" firstAttribute="top" secondItem="5Wr-gT-h8d" secondAttribute="topMargin" constant="10" id="mBs-7U-eLV"/>
+                                                <constraint firstItem="QeQ-Sm-Dk1" firstAttribute="leading" secondItem="f3d-T0-TsV" secondAttribute="trailing" constant="10" id="nxK-ra-URj"/>
+                                                <constraint firstItem="qfP-ak-hDY" firstAttribute="leading" secondItem="f3d-T0-TsV" secondAttribute="trailing" constant="10" id="qVG-07-ZQp"/>
                                                 <constraint firstItem="rn7-t9-t0r" firstAttribute="top" secondItem="o5O-Ls-gN6" secondAttribute="bottom" constant="15" id="sey-tv-TPk"/>
+                                                <constraint firstItem="QeQ-Sm-Dk1" firstAttribute="leading" secondItem="f3d-T0-TsV" secondAttribute="trailing" constant="10" id="tya-Rb-cp0"/>
                                                 <constraint firstItem="qfP-ak-hDY" firstAttribute="leading" secondItem="5Wr-gT-h8d" secondAttribute="leadingMargin" constant="20" id="uOF-1S-Z5p"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="gOL-tP-UsH"/>
+                                                    <exclude reference="tya-Rb-cp0"/>
+                                                    <exclude reference="Vvw-0H-aYx"/>
+                                                    <exclude reference="uOF-1S-Z5p"/>
+                                                    <exclude reference="3Z7-q6-deq"/>
+                                                    <exclude reference="CAZ-WS-lnK"/>
+                                                    <exclude reference="sey-tv-TPk"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="awayGoals" destination="rn7-t9-t0r" id="DQz-EK-suy"/>

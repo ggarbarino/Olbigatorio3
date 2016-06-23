@@ -37,15 +37,10 @@ class ViewControllerTeamFixture: UIViewController {
                 self.tableViewTeamFixture.dataSource = self
                 self.tableViewTeamFixture.reloadData()
             }
-            
-            
-            
-            
         }
     }
-    
-    
 }
+
 extension ViewControllerTeamFixture: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (fixture?.count)!
