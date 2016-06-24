@@ -15,7 +15,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ein-Mq-N3Q">
-                            <rect key="frame" x="20" y="15" width="42" height="21"/>
+                            <rect key="frame" x="20" y="14.5" width="42" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -43,13 +43,21 @@
                     <constraints>
                         <constraint firstItem="gCQ-bE-FbF" firstAttribute="leading" secondItem="LeS-Bz-Rqg" secondAttribute="trailing" constant="35" id="1kM-U6-GIt"/>
                         <constraint firstItem="ein-Mq-N3Q" firstAttribute="centerY" secondItem="HKQ-L5-Htw" secondAttribute="centerY" id="4Oo-S8-J4g"/>
-                        <constraint firstItem="UZw-f6-5l7" firstAttribute="leading" secondItem="ein-Mq-N3Q" secondAttribute="trailing" constant="48" id="Bsh-HY-Nc3"/>
+                        <constraint firstItem="UZw-f6-5l7" firstAttribute="leading" secondItem="ein-Mq-N3Q" secondAttribute="trailing" constant="45" id="Bsh-HY-Nc3"/>
+                        <constraint firstAttribute="trailing" secondItem="gCQ-bE-FbF" secondAttribute="trailing" constant="65" id="Eqv-NP-Np7"/>
                         <constraint firstItem="gCQ-bE-FbF" firstAttribute="centerY" secondItem="HKQ-L5-Htw" secondAttribute="centerY" id="Ij6-my-drf"/>
+                        <constraint firstItem="gCQ-bE-FbF" firstAttribute="leading" secondItem="LeS-Bz-Rqg" secondAttribute="trailing" constant="46" id="JIr-7h-4LJ"/>
                         <constraint firstItem="LeS-Bz-Rqg" firstAttribute="centerY" secondItem="HKQ-L5-Htw" secondAttribute="centerY" id="NZz-Q8-aAY"/>
                         <constraint firstItem="ein-Mq-N3Q" firstAttribute="leading" secondItem="HKQ-L5-Htw" secondAttribute="leading" constant="20" id="VnT-fB-HU3"/>
                         <constraint firstItem="UZw-f6-5l7" firstAttribute="centerY" secondItem="HKQ-L5-Htw" secondAttribute="centerY" id="r1o-g9-nq5"/>
-                        <constraint firstItem="LeS-Bz-Rqg" firstAttribute="leading" secondItem="UZw-f6-5l7" secondAttribute="trailing" constant="35" id="u4g-RH-6AO"/>
+                        <constraint firstItem="LeS-Bz-Rqg" firstAttribute="leading" secondItem="UZw-f6-5l7" secondAttribute="trailing" constant="50" id="u4g-RH-6AO"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="1kM-U6-GIt"/>
+                            <exclude reference="Eqv-NP-Np7"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.65469818950000003" green="0.89962698190000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
