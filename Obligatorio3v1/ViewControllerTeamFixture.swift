@@ -8,17 +8,23 @@
 
 import UIKit
 import DateTools
+import GoogleMobileAds
 
 class ViewControllerTeamFixture: UIViewController {
     
     var fixture: [Fixture]?
     var urlFixture: String?
   
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var tableViewTeamFixture: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
+
     }
     
     override func didReceiveMemoryWarning() {
