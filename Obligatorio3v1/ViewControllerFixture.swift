@@ -9,16 +9,17 @@
 
 import UIKit
 import DateTools
-import DZNEmptyDataSet
 
-class ViewControllerFixture: UIViewController, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate{
+
+class ViewControllerFixture: UIViewController{
     var fixture: [Fixture]?
     var matchDay: String = ""
     @IBOutlet weak var tableViewFixture: UITableView!
+    @IBOutlet weak var emptyActivity: UIActivityIndicatorView!
+    
     
     override func viewDidLoad() {
-        self.tableViewFixture.emptyDataSetDelegate = self
-        self.tableViewFixture.emptyDataSetSource = self
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -28,14 +29,16 @@ class ViewControllerFixture: UIViewController, DZNEmptyDataSetSource, DZNEmptyDa
         // Dispose of any resources that can be recreated.
     }
     override func viewWillAppear(animated: Bool) {
-        
+
         super.viewWillAppear(animated)
+        emptyActivity.startAnimating()
         APIClientFixture.sharedClient.fixtureOnCompletion("global") { (fixture, error) -> Void in
             
             if let fixture = fixture {
                 self.fixture = fixture
                 self.tableViewFixture.dataSource = self
                 self.tableViewFixture.reloadData()
+                self.emptyActivity.stopAnimating()
             }
         }
     }
@@ -47,12 +50,7 @@ extension ViewControllerFixture: UITableViewDataSource {
         return (fixture?.count)!
     }
     
-    func imageForEmptyDataSet(scrollView:UIScrollView)->UIImage{
-       var emptyImage: UIImage
-        emptyImage = UIImage(named: "622903")!
-       
-        return emptyImage
-    }
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let dequeued = tableView.dequeueReusableCellWithIdentifier("fixtureCell", forIndexPath: indexPath) as! TableViewCellFixture
         let cell = dequeued as TableViewCellFixture
@@ -65,7 +63,7 @@ extension ViewControllerFixture: UITableViewDataSource {
         else{
             self.matchDay = (fixture![indexPath.row].date?.formattedDateWithFormat("EEE dd MMMM"))!
         }
-        cell.dateMatch.text = matchDay// + " of " + (fixture![indexPath.row].date?.formattedDateWithFormat("MMMM"))!
+        cell.dateMatch.text = matchDay
         
         if let goalsHomeTeam = fixture![indexPath.row].goalsHomeTeam, goalsAwayTeam = fixture![indexPath.row].goalsAwayTeam  {
             cell.homeGoals.text = goalsHomeTeam.description

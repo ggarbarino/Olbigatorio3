@@ -19,6 +19,7 @@ class TableViewCellTeamFixture: UITableViewCell{
     @IBOutlet weak var awayFlag: UIImageView!
     @IBOutlet weak var awayTeam: UILabel!
     @IBOutlet weak var awayGoals: UILabel!
+    @IBOutlet weak var date: UILabel!
     
     
     override func awakeFromNib() {

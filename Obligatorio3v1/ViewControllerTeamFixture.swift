@@ -14,7 +14,7 @@ class ViewControllerTeamFixture: UIViewController {
     
     var fixture: [Fixture]?
     var urlFixture: String?
-  
+    var matchDay: String = ""
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var tableViewTeamFixture: UITableView!
     
@@ -68,7 +68,14 @@ extension ViewControllerTeamFixture: UITableViewDataSource {
         }
         cell.homeFlag.image = UIImage(named: fixture![indexPath.row].homeTeamName!)
         cell.awayFlag.image = UIImage(named: fixture![indexPath.row].awayTeamName!)
-        
+        let matchStatus: String = fixture![indexPath.row].status!
+        if matchStatus == "TIMED"{
+            self.matchDay = (fixture![indexPath.row].date?.formattedDateWithFormat("EEE dd MMMM hh:mm a"))!
+        }
+        else{
+            self.matchDay = (fixture![indexPath.row].date?.formattedDateWithFormat("EEE dd MMMM"))!
+        }
+        cell.date.text = matchDay
         
         
         return cell
