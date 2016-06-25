@@ -13,5 +13,6 @@ target 'Obligatorio3v1' do
   pod 'Firebase'
   pod 'Firebase/Core'
   pod 'Firebase/AdMob'
+  pod 'DZNEmptyDataSet'
 end
 
