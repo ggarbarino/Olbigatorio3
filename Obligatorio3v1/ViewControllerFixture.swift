@@ -16,22 +16,17 @@ class ViewControllerFixture: UIViewController{
     var matchDay: String = ""
     @IBOutlet weak var tableViewFixture: UITableView!
     @IBOutlet weak var emptyActivity: UIActivityIndicatorView!
-    
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
-        
+        let myTimer = NSTimer(timeInterval: 60.0, target: self, selector: Selector("refresh"), userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(myTimer, forMode: NSDefaultRunLoopMode)
         super.viewDidLoad()
         self.title = "Fixture"
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    override func viewWillAppear(animated: Bool) {
-
-        super.viewWillAppear(animated)
+    func refresh() {
         emptyActivity.startAnimating()
         APIClientFixture.sharedClient.fixtureOnCompletion("global") { (fixture, error) -> Void in
             
@@ -42,6 +37,17 @@ class ViewControllerFixture: UIViewController{
                 self.emptyActivity.stopAnimating()
             }
         }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        refresh()
+
     }
 
 }

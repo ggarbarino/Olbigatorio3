@@ -12,39 +12,50 @@ import GoogleMobileAds
 
 class ViewControllerTeamFixture: UIViewController {
     
+   
+    @IBOutlet weak var emptyIndicatorFixture: UIActivityIndicatorView!
     var fixture: [Fixture]?
     var urlFixture: String?
     var teamName: String?
     var matchDay: String = ""
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var tableViewTeamFixture: UITableView!
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.loadRequest(GADRequest())
         self.title = teamName! + " Matches"
+        let myTimer = NSTimer(timeInterval: 60.0, target: self, selector: Selector("refresh"), userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(myTimer, forMode: NSDefaultRunLoopMode)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func viewWillAppear(animated: Bool) {
-        
-        super.viewWillAppear(animated)
-        
-        
+    func refresh(){
+        emptyIndicatorFixture.startAnimating()
         APIClientFixture.sharedClient.fixtureOnCompletion(urlFixture) { (fixture, error) -> Void in
             
             if let fixture = fixture {
                 self.fixture = fixture
                 self.tableViewTeamFixture.dataSource = self
                 self.tableViewTeamFixture.reloadData()
+                self.emptyIndicatorFixture.stopAnimating()
             }
         }
+    }
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        refresh()
+        
+
     }
 }
 

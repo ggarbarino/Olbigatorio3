@@ -319,6 +319,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3B1-05-ewO">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdl-xf-JWI" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="500" width="600" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -332,8 +336,10 @@
                             <constraint firstItem="RBR-B8-tlD" firstAttribute="top" secondItem="gdl-xf-JWI" secondAttribute="bottom" id="9BJ-jZ-7tV"/>
                             <constraint firstItem="gdl-xf-JWI" firstAttribute="top" secondItem="Vcb-XZ-dhR" secondAttribute="bottom" id="Cdb-AQ-GnQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gdl-xf-JWI" secondAttribute="trailing" constant="-20" id="Psz-ZM-vqg"/>
+                            <constraint firstItem="3B1-05-ewO" firstAttribute="centerX" secondItem="en5-Tn-Jp3" secondAttribute="centerX" id="YiY-h0-t4v"/>
                             <constraint firstItem="Vcb-XZ-dhR" firstAttribute="top" secondItem="en5-Tn-Jp3" secondAttribute="topMargin" id="dEz-7M-V1A"/>
                             <constraint firstItem="gdl-xf-JWI" firstAttribute="leading" secondItem="en5-Tn-Jp3" secondAttribute="leadingMargin" constant="-20" id="ftf-Ov-0K2"/>
+                            <constraint firstItem="3B1-05-ewO" firstAttribute="centerY" secondItem="en5-Tn-Jp3" secondAttribute="centerY" id="omu-na-lP0"/>
                             <constraint firstItem="RBR-B8-tlD" firstAttribute="top" secondItem="Vcb-XZ-dhR" secondAttribute="bottom" id="ozg-q0-5jH"/>
                             <constraint firstItem="Vcb-XZ-dhR" firstAttribute="leading" secondItem="en5-Tn-Jp3" secondAttribute="leadingMargin" constant="-20" id="tuO-6H-DHv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vcb-XZ-dhR" secondAttribute="trailing" constant="-20" id="vMW-mj-GWS"/>
@@ -346,12 +352,13 @@
                     </view>
                     <connections>
                         <outlet property="bannerView" destination="gdl-xf-JWI" id="gJI-nz-smS"/>
+                        <outlet property="emptyIndicatorFixture" destination="3B1-05-ewO" id="jid-9B-A7x"/>
                         <outlet property="tableViewTeamFixture" destination="Vcb-XZ-dhR" id="nIx-L7-xkg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cof-ZT-ltn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680" y="742"/>
+            <point key="canvasLocation" x="1827" y="850"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NZ4-ce-Jum">
