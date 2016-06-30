@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Obligatorio3v1.xcodeproj">
+      location = "group:/Volumes/Archivos_SP07/IOS/Obligatorio3v1/Euro 2016 Scores.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

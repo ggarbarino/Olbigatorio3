@@ -21,7 +21,6 @@
 		95AB51201D0B8C8200A3CF0E /* APIClientFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB511F1D0B8C8200A3CF0E /* APIClientFixture.swift */; };
 		95AB51221D0B908000A3CF0E /* ViewControllerFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB51211D0B908000A3CF0E /* ViewControllerFixture.swift */; };
 		95AB51241D0B92FA00A3CF0E /* TableViewCellFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB51231D0B92FA00A3CF0E /* TableViewCellFixture.swift */; };
-		95D3B7421D1DF85F00B3519B /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3B7411D1DF85F00B3519B /* ViewControllerHome.swift */; };
 		95DD5C7E1D0A13F6004D8EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD5C7D1D0A13F6004D8EB0 /* AppDelegate.swift */; };
 		95DD5C801D0A13F6004D8EB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD5C7F1D0A13F6004D8EB0 /* ViewController.swift */; };
 		95DD5C831D0A13F7004D8EB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95DD5C811D0A13F7004D8EB0 /* Main.storyboard */; };
@@ -68,7 +67,6 @@
 		95AB511F1D0B8C8200A3CF0E /* APIClientFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientFixture.swift; sourceTree = "<group>"; };
 		95AB51211D0B908000A3CF0E /* ViewControllerFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFixture.swift; sourceTree = "<group>"; };
 		95AB51231D0B92FA00A3CF0E /* TableViewCellFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellFixture.swift; sourceTree = "<group>"; };
-		95D3B7411D1DF85F00B3519B /* ViewControllerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerHome.swift; sourceTree = "<group>"; };
 		95DD5C7A1D0A13F6004D8EB0 /* Obligatorio3v1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Obligatorio3v1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95DD5C7D1D0A13F6004D8EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95DD5C7F1D0A13F6004D8EB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 			children = (
 				95DD5C7F1D0A13F6004D8EB0 /* ViewController.swift */,
 				95AB51211D0B908000A3CF0E /* ViewControllerFixture.swift */,
-				95D3B7411D1DF85F00B3519B /* ViewControllerHome.swift */,
 				95822EEB1D14B99E004EC95E /* ViewControllerStandings.swift */,
 				95EFE10B1D12317F003B5A6C /* ViewControllerTeamFixture.swift */,
 			);
@@ -318,7 +315,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 95DD5C751D0A13F6004D8EB0 /* Build configuration list for PBXProject "Obligatorio3v1" */;
+			buildConfigurationList = 95DD5C751D0A13F6004D8EB0 /* Build configuration list for PBXProject "Euro 2016 Scores" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -425,7 +422,6 @@
 				95AB51201D0B8C8200A3CF0E /* APIClientFixture.swift in Sources */,
 				95DD5CAE1D0A1AF6004D8EB0 /* Team.swift in Sources */,
 				953A59B51D1B6AAA0091845D /* HeaderStandings.swift in Sources */,
-				95D3B7421D1DF85F00B3519B /* ViewControllerHome.swift in Sources */,
 				95DD5C801D0A13F6004D8EB0 /* ViewController.swift in Sources */,
 				95822EEE1D14B9D0004EC95E /* TableViewCellStandings.swift in Sources */,
 				952F05A31D135D81001F7EF8 /* APIClientPositions.swift in Sources */,
@@ -655,7 +651,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		95DD5C751D0A13F6004D8EB0 /* Build configuration list for PBXProject "Obligatorio3v1" */ = {
+		95DD5C751D0A13F6004D8EB0 /* Build configuration list for PBXProject "Euro 2016 Scores" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95DD5CA01D0A13F7004D8EB0 /* Debug */,

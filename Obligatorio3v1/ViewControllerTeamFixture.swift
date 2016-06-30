@@ -14,6 +14,7 @@ class ViewControllerTeamFixture: UIViewController {
     
     var fixture: [Fixture]?
     var urlFixture: String?
+    var teamName: String?
     var matchDay: String = ""
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var tableViewTeamFixture: UITableView!
@@ -24,7 +25,7 @@ class ViewControllerTeamFixture: UIViewController {
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.loadRequest(GADRequest())
-
+        self.title = teamName! + " Matches"
     }
     
     override func didReceiveMemoryWarning() {

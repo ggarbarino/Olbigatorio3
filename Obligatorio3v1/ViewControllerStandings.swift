@@ -11,6 +11,8 @@ import AlamofireImage
 
 class ViewControllerStandings: UIViewController, UITableViewDelegate {
     
+   
+    @IBOutlet weak var emptySt: UIActivityIndicatorView!
     var standings: Standings?
     var actualGroup:[Team]?
    
@@ -18,7 +20,7 @@ class ViewControllerStandings: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        self.title = "Standings"
         self.tableGroup.registerNib(UINib(nibName: "HeaderStandings", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderStandings")
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -30,7 +32,7 @@ class ViewControllerStandings: UIViewController, UITableViewDelegate {
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
-        
+        emptySt.startAnimating()
         
         APIClientPositions.sharedClient.footballOnCompletion { (standings, error) -> Void in
             
@@ -39,6 +41,7 @@ class ViewControllerStandings: UIViewController, UITableViewDelegate {
                 self.tableGroup.dataSource = self
                 self.tableGroup.delegate = self
                 self.tableGroup.reloadData()
+                self.emptySt.stopAnimating()
             }
             
             

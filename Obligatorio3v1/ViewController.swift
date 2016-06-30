@@ -13,9 +13,12 @@ import GoogleMobileAds
 class ViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var bannerView: GADBannerView!
     var team: [Team]?
+    @IBOutlet weak var emptyIndicatorTeam: UIActivityIndicatorView!
+    var teamName: String? = ""
     var teamFixtrue: String? = ""
     @IBOutlet weak var teamsTable: UITableView!
     override func viewDidLoad() {
+        self.title = "Teams"
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
@@ -30,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+        emptyIndicatorTeam.startAnimating()
         APIClient.sharedClient.footballOnCompletion { (team, error) -> Void in
             
             if let team = team {
@@ -38,12 +41,14 @@ class ViewController: UIViewController, UITableViewDelegate {
                 self.teamsTable.dataSource = self
                 self.teamsTable.delegate = self
                 self.teamsTable.reloadData()
+                self.emptyIndicatorTeam.stopAnimating()
             }
         }
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         teamFixtrue = team![indexPath.row].teamFixture
+        teamName = team![indexPath.row].name
         self.performSegueWithIdentifier("goToTeamFixture", sender: nil)
     }
     
@@ -52,6 +57,7 @@ class ViewController: UIViewController, UITableViewDelegate {
         if (segue.identifier=="goToTeamFixture"){
             let teamFixture = segue.destinationViewController as! ViewControllerTeamFixture
             teamFixture.urlFixture = teamFixtrue
+            teamFixture.teamName = teamName
         }
     }
 }
